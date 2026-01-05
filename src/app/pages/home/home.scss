@@ -1,0 +1,29 @@
+.home {
+  h1 {
+    color: #E31246;
+    font-size: 32px;
+    line-height: 56px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: #E31246;
+    font-size: 24px;
+    line-height: 56px;
+    margin: 35px 0 10px 0;
+  }
+
+  p {
+    margin: 18px 0 28px 0;
+    line-height: 28px;
+    text-align: justify;
+  }
+
+  .hero-image {
+    float: right;
+    max-width: 300px;
+    margin: 0 0 20px 20px;
+    border-radius: 8px;
+    border: 3px solid #F7DEC4;
+  }
+}

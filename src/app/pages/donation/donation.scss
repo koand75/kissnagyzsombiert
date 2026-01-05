@@ -1,0 +1,33 @@
+.donation {
+  h1 {
+    color: #E31246;
+    font-size: 32px;
+    line-height: 56px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: #E31246;
+    font-size: 24px;
+    line-height: 56px;
+    margin: 35px 0 10px 0;
+  }
+
+  p {
+    margin: 18px 0 28px 0;
+    line-height: 28px;
+    text-align: justify;
+  }
+
+  .info-box {
+    background-color: rgba(247, 222, 196, 0.3);
+    border-left: 4px solid #E31246;
+    padding: 14px 20px;
+    margin: 0 0 28px 0;
+
+    p {
+      margin: 0;
+      line-height: 28px;
+    }
+  }
+}
