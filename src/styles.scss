@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   min-height: 100vh;
   font-family: 'Playpen Sans', cursive;
   background-color: #FFFCEE;
@@ -30,14 +31,12 @@ html, body {
   background-size: calc(100% - 80px) 100%;
   background-position: center;
   background-repeat: repeat-y;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 27px,
-    #E4E4E4 27px,
-    #E4E4E4 28px
-  );
-  line-height: 28px;  
+  background-image: repeating-linear-gradient(to bottom,
+      transparent,
+      transparent 27px,
+      #E4E4E4 27px,
+      #E4E4E4 28px);
+  line-height: 28px;
 }
 
 h1 {
@@ -62,10 +61,6 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   transition: width 0.3s ease;
-}
-
-.sidebar.closed {
-  width: 60px;
 }
 
 .sidebar-menu {
@@ -120,37 +115,14 @@ h1 {
   flex: 1;
 }
 
-.logo-monogram {
-  display: flex;
-  font-size: 22px;
-  font-weight: 700;
-  color: #E31246;
-  gap: 2px;
-  margin-bottom: 4px;
+.logo-image {
+  display: none;
+  height: 36px;
+  width: auto;
 }
 
-.logo-monogram .letter {
-  display: inline-block;
-}
-
-.logo-monogram .letter.up {
-  transform: translateY(-3px);
-}
-
-.logo-monogram .letter.down {
-  transform: translateY(3px);
-}
-
-.sidebar.closed .logo-monogram {
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  font-size: 16px;
-}
-
-.sidebar.closed .logo-monogram .letter.up,
-.sidebar.closed .logo-monogram .letter.down {
-  transform: none;
+.sidebar.closed .logo-image {
+  display: block;
 }
 
 .sidebar.closed .sidebar-logo .logo-text {
@@ -174,8 +146,8 @@ h1 {
 }
 
 .sidebar.closed .sidebar-header {
-  justify-content: center;
-  padding: 15px 10px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .sidebar.closed .menu-item .label {
@@ -186,7 +158,6 @@ h1 {
   flex: 1;
   margin: 0;
 }
-
 
 .mobile-header {
   display: none;
