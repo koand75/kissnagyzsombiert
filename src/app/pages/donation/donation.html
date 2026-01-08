@@ -17,19 +17,27 @@
   <div class="info-box">
     <p>
       {{ donationData.name }}
-      <button class="copy-btn" (click)="copyToClipboard(donationData.name)" title="Másolás"></button>
+      <button class="copy-btn" (click)="copyToClipboard(donationData.name)" title="Másolás">
+         <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
+      </button>
     </p>
     <p>
       Bankszámlaszám: <strong>{{ donationData.accountNumber }}</strong>
-      <button class="copy-btn" (click)="copyToClipboard(donationData.accountNumber)" title="Másolás"></button>
+      <button class="copy-btn" (click)="copyToClipboard(donationData.accountNumber)" title="Másolás">
+         <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
+      </button>
     </p>
     <p>
       IBAN: <strong>{{ donationData.iban }}</strong>
-      <button class="copy-btn" (click)="copyToClipboard(donationData.iban)" title="Másolás"></button>
+      <button class="copy-btn" (click)="copyToClipboard(donationData.iban)" title="Másolás">
+         <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
+      </button>
     </p>
     <p>
       SWIFT/BIC: <strong>{{ donationData.swift }}</strong>
-      <button class="copy-btn" (click)="copyToClipboard(donationData.swift)" title="Másolás"></button>
+      <button class="copy-btn" (click)="copyToClipboard(donationData.swift)" title="Másolás">
+         <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
+      </button>
     </p>
     <p>Bank: {{ donationData.bank }}</p>
   </div>
