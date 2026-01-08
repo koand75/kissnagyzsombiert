@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DonationModal } from '../../../shared/donation-modal/donation-modal';
+
 
 @Component({
   selector: 'app-donation',
-  imports: [],
+  imports: [CommonModule, DonationModal],
   templateUrl: './donation.html',
   styleUrl: './donation.scss',
 })
 
 export class Donation {
+  showModal = false;
+
   donationData = {
     name: 'Kiss-Nagy Zsomborért Alapítvány',
     registrationNumber: '10-01-0001211',
@@ -20,5 +25,13 @@ export class Donation {
 
   copyToClipboard(text: string) {
     navigator.clipboard.writeText(text);
+  }
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 }

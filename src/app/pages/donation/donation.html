@@ -1,5 +1,6 @@
 <article class="donation">
   <h1>Támogatás</h1>
+  <button class="donate-btn" (click)="openModal()">💳 Online adományozás</button>
 
   <p>Ahogy említettem, határtalan szeretettel és türelemmel mindent megtesznek értem, ezért egy alapítványt is
     létrehoztak, amelynek célja, hogy fejlesztésembe becsatornázza a közösség erejét, segítségét. Ez a Kiss-Nagy
@@ -18,25 +19,25 @@
     <p>
       {{ donationData.name }}
       <button class="copy-btn" (click)="copyToClipboard(donationData.name)" title="Másolás">
-         <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
+        <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
       </button>
     </p>
     <p>
       Bankszámlaszám: <strong>{{ donationData.accountNumber }}</strong>
       <button class="copy-btn" (click)="copyToClipboard(donationData.accountNumber)" title="Másolás">
-         <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
+        <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
       </button>
     </p>
     <p>
       IBAN: <strong>{{ donationData.iban }}</strong>
       <button class="copy-btn" (click)="copyToClipboard(donationData.iban)" title="Másolás">
-         <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
+        <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
       </button>
     </p>
     <p>
       SWIFT/BIC: <strong>{{ donationData.swift }}</strong>
       <button class="copy-btn" (click)="copyToClipboard(donationData.swift)" title="Másolás">
-         <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
+        <img src="./images/content_copy.svg" alt="Másolás" class="copy-icon">
       </button>
     </p>
     <p>Bank: {{ donationData.bank }}</p>
@@ -63,3 +64,6 @@
 
   <p>Kérlek, hogy ha szeretnél támogatni az utamon, az alapítványon keresztül tedd meg!</p>
 </article>
+@if (showModal) {
+<app-donation-modal (closeModal)="closeModal()"></app-donation-modal>
+}

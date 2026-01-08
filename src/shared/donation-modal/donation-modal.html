@@ -1,0 +1,32 @@
+<div class="modal-overlay" (click)="close()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="modal-close" (click)="close()">✕</button>
+
+        <h2>Online adományozás</h2>
+
+        <p class="subtitle">Válassz összeget:</p>
+
+        <div class="amount-grid">
+            <button class="amount-btn" [class.active]="selectedAmount === 1000" (click)="selectAmount(1000)">1 000
+                Ft</button>
+            <button class="amount-btn" [class.active]="selectedAmount === 2000" (click)="selectAmount(2000)">2 000
+                Ft</button>
+            <button class="amount-btn" [class.active]="selectedAmount === 5000" (click)="selectAmount(5000)">5 000
+                Ft</button>
+            <button class="amount-btn" [class.active]="selectedAmount === 10000" (click)="selectAmount(10000)">10 000
+                Ft</button>
+            <button class="amount-btn" [class.active]="selectedAmount === 20000" (click)="selectAmount(20000)">20 000
+                Ft</button>
+            <button class="amount-btn" [class.active]="selectedAmount === 0" (click)="selectAmount(0)">Egyéb</button>
+        </div>
+
+        @if (selectedAmount === 0) {
+        <div class="custom-amount">
+            <input type="number" [(ngModel)]="customAmount" placeholder="Írd be az összeget" min="100">
+            <span>Ft</span>
+        </div>
+        }
+
+        <a class="submit-btn" [href]="barionLink" target="_blank" (click)="close()">Tovább a fizetéshez</a>
+    </div>
+</div>
