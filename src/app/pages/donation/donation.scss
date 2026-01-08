@@ -31,3 +31,23 @@
     }
   }
 }
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 2px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  width: 24px;
+  height: 24px;
+  background-image: url('/images/content_copy.svg');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    opacity: 1;
+  }
+}

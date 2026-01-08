@@ -15,19 +15,33 @@
 
   <p><strong>Banki utalással:</strong></p>
   <div class="info-box">
-    <p>Kiss-Nagy Zsomborért Alapítvány</p>
-    <p>Bankszámlaszám: <strong>10403538-50526980-72761011</strong></p>
-    <p>IBAN: <strong>HU20 10403538 50526980 72761011</strong></p>
-    <p>SWIFT/BIC: <strong>OKHBHUHB</strong></p>
-    <p>Bank: K&H Bank</p>
+    <p>
+      {{ donationData.name }}
+      <button class="copy-btn" (click)="copyToClipboard(donationData.name)" title="Másolás"></button>
+    </p>
+    <p>
+      Bankszámlaszám: <strong>{{ donationData.accountNumber }}</strong>
+      <button class="copy-btn" (click)="copyToClipboard(donationData.accountNumber)" title="Másolás"></button>
+    </p>
+    <p>
+      IBAN: <strong>{{ donationData.iban }}</strong>
+      <button class="copy-btn" (click)="copyToClipboard(donationData.iban)" title="Másolás"></button>
+    </p>
+    <p>
+      SWIFT/BIC: <strong>{{ donationData.swift }}</strong>
+      <button class="copy-btn" (click)="copyToClipboard(donationData.swift)" title="Másolás"></button>
+    </p>
+    <p>Bank: {{ donationData.bank }}</p>
   </div>
 
   <p><strong>SZJA 1% felajánlásával:</strong></p>
   <div class="info-box">
-    <p>Adószám: <strong>19288026-1-10</strong></p>
-    <p>2024-től személyi jövedelemadód 1%-ának felajánlásával is támogathatod az alapítványt!</p>
+    <p>{{ donationData.name }}</p>
+    <p>Nyilvántartási szám: <strong>{{ donationData.registrationNumber }}</strong><button class="copy-btn"
+        (click)="copyToClipboard(donationData.registrationNumber)" title="Másolás"></button></p>
+    <p>Adószám: <strong>{{ donationData.taxNumber }}</strong><button class="copy-btn"
+        (click)="copyToClipboard(donationData.taxNumber)" title="Másolás"></button></p>
   </div>
-
   <p><strong>Cégként:</strong></p>
   <p>Amennyiben cégként támogatsz, alapítványunk igazolást állít ki a támogatás összegéről.</p>
 
