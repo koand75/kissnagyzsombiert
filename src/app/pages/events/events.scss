@@ -1,0 +1,64 @@
+.events {
+  h1 {
+    color: #E31246;
+    font-size: 32px;
+    line-height: 56px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: #E31246;
+    font-size: 24px;
+    line-height: 56px;
+    margin: 35px 0 10px 0;
+  }
+
+  p {
+    margin: 18px 0 28px 0;
+    line-height: 28px;
+    text-align: justify;
+  }
+
+  .events-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 15px;
+    margin-bottom: 28px;
+
+    .icon {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      line-height: 28px;
+
+      strong {
+        color: #E31246;
+      }
+
+      a {
+        color: #002F5C;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.card-container {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.business-card {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
