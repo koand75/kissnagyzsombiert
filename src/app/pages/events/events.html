@@ -2,18 +2,36 @@
     <h1>Események</h1>
 
     <div class="events-item">
-        <span class="icon">📘</span>
+        <span class="icon">🎈</span>
         <div class="details">
-            <a href="https://facebook.com/events/s/zsombiert-futunk-ujratoltve-/709574888816894/"
-                target="_blank">Zsomibiért futunk ÚJRATÖLTVE</a>
+            <span class="date">2025. december</span>
+            <span class="title">Focizzunk együtt egy mosolyért</span>
+            <img src="./images/zsomibvsfootball.jpg" alt="Esemény" class="event-thumbnail"
+                (click)="openImage('./images/zsomibvsfootball.jpg')">
+
         </div>
     </div>
 
     <div class="events-item">
         <span class="icon">📘</span>
         <div class="details">
-            <a href="https://facebook.com/events/s/zsombiert-futunk/617442597550695/" target="_blank">Zsomibiért
+            <span class="date">2025. október 19.</span>
+            <a href="https://facebook.com/events/s/zsombiert-futunk-ujratoltve-/709574888816894/"
+                target="_blank">Zsombiért futunk ÚJRATÖLTVE</a>
+        </div>
+    </div>
+
+    <div class="events-item">
+        <span class="icon">📘</span>
+        <div class="details">
+            <span class="date">2025. július</span>
+            <a href="https://facebook.com/events/s/zsombiert-futunk/617442597550695/" target="_blank">Zsombiért
                 futunk</a>
         </div>
     </div>
+    @if (selectedImage) {
+    <div class="image-modal" (click)="closeImage()">
+        <img [src]="selectedImage" alt="Esemény nagyban">
+    </div>
+}
 </article>

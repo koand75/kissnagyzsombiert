@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Events {
 
+  selectedImage: string | null = null;
+
+  openImage(src: string) {
+    this.selectedImage = src;
+  }
+
+  closeImage() {
+    this.selectedImage = null;
+  }
 }
