@@ -5,7 +5,8 @@
   <p>Saját tervezésű kézműves termékek készítésével is foglalkozunk, melyből befolyt összeget gyógykezelésemre,
     fejlesztésemre fordítjuk.</p>
 
-  <p>Minden segítség kritikusan fontos, legyen az pénzbeli felajánlás vagy egy olyan tárgy, amit licitre tudunk bocsátani. Mindennel segítesz!</p>
+  <p>Minden segítség kritikusan fontos, legyen az pénzbeli felajánlás vagy egy olyan tárgy, amit licitre tudunk
+    bocsátani. Mindennel segítesz!</p>
 
   <h2>Hogyan támogathatsz?</h2>
 
@@ -38,6 +39,13 @@
     <p>Bank: {{ donationData.bank }}</p>
   </div>
 
+  <p><strong>REpont üvegvisszaváltással:</strong></p>
+  <div class="info-box">
+    <p>A visszaváltáskor kapott összeget felajánlhatod az alapítványnak!</p>
+    <img src="./images/repont_qr.jpg" alt="REpont QR kód" class="qr-thumbnail"
+      (click)="openImage('./images/repont_qr.jpg')">
+  </div>
+
   <p><strong>SZJA 1% felajánlásával:</strong></p>
   <div class="info-box">
     <p>{{ donationData.name }}</p>
@@ -61,4 +69,10 @@
 </article>
 @if (showModal) {
 <app-donation-modal (closeModal)="closeModal()"></app-donation-modal>
+}
+
+@if (selectedImage) {
+<div class="image-modal" (click)="closeImage()">
+  <img [src]="selectedImage" alt="QR kód nagyban">
+</div>
 }

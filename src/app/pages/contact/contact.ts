@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  selectedImage: string | null = null;
 
+  openImage(src: string) {
+    this.selectedImage = src;
+  }
+
+  closeImage() {
+    this.selectedImage = null;
+  }
 }

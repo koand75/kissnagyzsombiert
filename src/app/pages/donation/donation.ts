@@ -34,4 +34,14 @@ export class Donation {
   closeModal() {
     this.showModal = false;
   }
+
+  selectedImage: string | null = null;
+
+  openImage(src: string) {
+    this.selectedImage = src;
+  }
+
+  closeImage() {
+    this.selectedImage = null;
+  }
 }

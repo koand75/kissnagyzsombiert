@@ -31,7 +31,14 @@
   </div>
 
   <div class="card-container">
-    <img src="./images/card.jpg" alt="Kiss-Nagy Zsomborért Alapítvány névjegykártya" class="business-card">
+    <img src="./images/card.jpg" alt="Kiss-Nagy Zsomborért Alapítvány" class="card-thumbnail"
+      (click)="openImage('./images/card.jpg')">
   </div>
+
+  @if (selectedImage) {
+  <div class="image-modal" (click)="closeImage()">
+    <img [src]="selectedImage" alt="Névjegykártya nagyban">
+  </div>
+  }
 
 </article>
