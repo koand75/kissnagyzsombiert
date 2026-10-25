@@ -8,5 +8,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.scss',
 })
 export class Home {
-
+  showEgyszazalek = false; // január-május: true
 }
